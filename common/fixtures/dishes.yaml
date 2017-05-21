@@ -1,0 +1,875 @@
+#
+# Браво
+#
+
+# Салаты
+
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Нептун
+    description: огурец св., кукуруза, яйцо, сыр, отв. кальмар, майонез.
+    weight: 130
+    price: 1.92
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Овощной
+    description: свежие помидоры, огурцы, капуста пекинская сметана, зелень
+    weight: 150
+    price: 1.52
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Мужской каприз
+    description: отварная говядина, лук маринован., яйцо, сыр,майонез,зелень.
+    weight: 150
+    price: 2.4
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Тройка
+    description: огурец св., помидор, отв. язык, филе куриное, филей к/в, кукуруза, майонез
+    weight: 130
+    price: 2.56
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Бонито
+    description: Филе куриное, морковь пикантная,сыр,яйцо, майонез.
+    weight: 160
+    price: 1.92
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат ДЕ ЖА ВЮ
+    description: Ветчина,огурчики мар., горошек,яйцо,майонез.
+    weight: 150
+    price: 2
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Шубка
+    description: Сельдь Матиас,свекла, картофель,морковь,лук, яйцо,майонез.
+    weight: 215
+    price: 2
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Ретро
+    description: Свежий огурец,кукуруза конс.,крабовое мясо,рис отв.,яйцо,сыр,майонез, гренки.
+    weight: 190
+    price: 1.84
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Шопский
+    description: Свежие огурцы,томаты,перец,капуста пекинская,сыр рассольный,масло растительное.
+    weight: 150
+    price: 2
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Хакеры
+    description: салями к/в,морковь пряная,огурец, шампиньоны, майонез,зелень
+    weight: 170
+    price: 2
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Слоеный
+    description: помидоры, яйцо, майонез, сыр.
+    weight: 135
+    price: 1.6
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Ангел-А
+    description: филе куриное, яйцо, апельсин, майонез, сыр
+    weight: 150
+    price: 1.92
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Цезарь с креветками
+    description: Креветки, пекинка, томат, яйцо, сыр, Соус Цезарь, сухарики
+    weight: 135
+    price: 2.32
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Лагуна
+    description: семга х/к, огурец св., перец св., яйцо, сыр Фитаки, соус Цезарь
+    weight: 110
+    price: 2.56
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 1
+
+# Первые блюда
+
+- model: common.dish
+  pk:
+  fields:
+    name: Бульон из птицы с яйцом и гренкой
+    description:
+    weight: 250/20
+    price: 1.6
+    image:
+    is_enabled: True
+    category: 2
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Суп  с фрикадельками
+    description:
+    weight: 250г
+    price: 2
+    image:
+    is_enabled: True
+    category: 2
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Борщ Холодный
+    description:
+    weight: 230/20
+    price: 1.28
+    image:
+    is_enabled: True
+    category: 2
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Суп сырный
+    description: рис, картофель, залень, куриное филе, сыр
+    weight: 250г
+    price: 1.6
+    image:
+    is_enabled: True
+    category: 2
+    cafe: 1
+
+# Вторые блюда
+
+- model: common.dish
+  pk:
+  fields:
+    name: Язык запеченный с картофелем
+    description:
+    weight: 220г
+    price: 3.2
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Домаш. колбаса запеч. с обж. луком, морк. и отв. карт.под майон.
+    description:
+    weight:
+    price: 2.64
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Паста с курицей и грибами
+    description:
+    weight: 210/30
+    price: 3.28
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Колбаса домашняя жаренная
+    description:
+    weight: 100гр
+    price: 1.84
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Колдуны из карт. с мясом и сметаной
+    description:
+    weight: 230/30
+    price: 2.8
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Горбуша запеченая с картофелем
+    description: горбуша запеченая с картофелем под майонезом и сыром
+    weight: 200гр
+    price: 3.04
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Свинина Блеф
+    description: Свинина запеченная с беконом,сыром и помидором под майонезом.
+    weight: 130г
+    price: 3.2
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Коррида
+    description: запеченая говядина с яйцом, майонезом и сыром
+    weight: 140г
+    price: 3.36
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Сосиски запеч. с карт. помид под майон. и сыром
+    description:
+    weight:
+    price: 2.4
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Глазунья с беконом
+    description:
+    weight:
+    price: 1.6
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Мюнхенские кобаски с кетчупом
+    description:
+    weight: 150/25
+    price: 2.4
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Рис Карри с курицей и перцем, помидор
+    description: рис, курица, перец свежий, помидор
+    weight: 150/30гр
+    price: 2.56
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Курочка Пальчики оближешь с чесн.соусом
+    description:
+    weight: 130/30
+    price: 2.8
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Рулетики из свиниы с сыром и  зеленью
+    description:
+    weight: 150г
+    price: 3.2
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Смак
+    description: рубленое куриное филе  с луком и грибами сформованное в виде бифштекса
+    weight: 150г
+    price: 2.4
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Блины с курицей , грибами со сметаной
+    description:
+    weight: 220/30
+    price: 3.12
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Блины с яблоками и джемом
+    description:
+    weight: 220/30
+    price: 1.84
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Рулетики из птицы с грибами и сыром
+    description: Рулетики из птицы с грибами и сыром 150гр
+    weight: 150гр
+    price: 2.4
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Гречка с поджаркой
+    description:
+    weight: 150/100г
+    price: 3.04
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Куриное филе в сыре
+    description:
+    weight: 130
+    price: 2.96
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 1
+
+# Гарниры
+
+- model: common.dish
+  pk:
+  fields:
+    name: Рис с маслом
+    description:
+    weight: 150г
+    price: 0.56
+    image:
+    is_enabled: True
+    category: 4
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Гречка с маслом
+    description:
+    weight: 150г
+    price: 0.56
+    image:
+    is_enabled: True
+    category: 4
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Картофель  с маслом и укропом
+    description:
+    weight: 150г
+    price: 0.72
+    image:
+    is_enabled: True
+    category: 4
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Картофельное пюре
+    description:
+    weight: 150г
+    price: 0.72
+    image:
+    is_enabled: True
+    category: 4
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Картофель фри
+    description:
+    weight: 150г
+    price: 1.2
+    image:
+    is_enabled: True
+    category: 4
+    cafe: 1
+
+# Комплексы
+
+- model: common.dish
+  pk:
+  fields:
+    name: Комплекс №1
+    description: Салат Овощной 100гр,Суп сырный 250гр,котлета мясная 75гр, картофельное пюре 100г
+    weight:
+    price: 4.48
+    image:
+    is_enabled: True
+    category: 5
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Комплекс №2
+    description: Салат Аваторка 100гр, Борщ Холодный 250г, Колдуны 115/15гр
+    weight:
+    price: 3.84
+    image:
+    is_enabled: True
+    category: 5
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Комплекс №3
+    description: Салат Ретро 100гр, Суп с фрикадельками 250гр, Рулетик со свинины с пюре 75/100гр
+    weight:
+    price: 5.52
+    image:
+    is_enabled: True
+    category: 5
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Комплекс №4
+    description: Салат Оливье 100гр,Борщ Холодный 250гр, блинчик с курицей,сметана 100/15гр
+    weight:
+    price: 3.68
+    image:
+    is_enabled: True
+    category: 5
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Комплекс №5
+    description: Салат Слоеный 100гр,Суп с фрикадельками 250гр, Смак с гречкой 75/100гр
+    weight:
+    price: 5.36
+    image:
+    is_enabled: True
+    category: 5
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Комплекс №6
+    description: Салат Шопский 100гр,Суп сырный 250гр, колбаски Мюнхенские с кетчупом 75/15гр,картошка фри 75гр
+    weight:
+    price: 4.48
+    image:
+    is_enabled: True
+    category: 5
+    cafe: 1
+
+# Хлеб
+
+- model: common.dish
+  pk:
+  fields:
+    name: Хлеб ржаной
+    description:
+    weight: 20г
+    price: 0.06
+    image:
+    is_enabled: True
+    category: 6
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Хлеб тостовый
+    description:
+    weight: 25г
+    price: 0.07
+    image:
+    is_enabled: True
+    category: 6
+    cafe: 1
+- model: common.dish
+  pk:
+  fields:
+    name: Хлеб ржаной с ароматным чесноком
+    description:
+    weight: 35г
+    price: 0.15
+    image:
+    is_enabled: True
+    category: 6
+    cafe: 1
+
+#
+# Сели & Съели
+#
+
+# Салаты
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Легкий
+    description:
+    weight: 120г
+    price: 0.9
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Салат с ветчиной и кукурузой
+    description:
+    weight: 120г
+    price: 1.13
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Греческий
+    description:
+    weight: 150г
+    price: 1.8
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Салат Цезарь
+    description:
+    weight: 150г
+    price: 2
+    image:
+    is_enabled: True
+    category: 1
+    cafe: 2
+
+# Первые блюда
+
+- model: common.dish
+  pk:
+  fields:
+    name: Борщ
+    description:
+    weight: 250г
+    price: 0.82
+    image:
+    is_enabled: True
+    category: 2
+    cafe: 2
+
+# Вторые блюда
+
+- model: common.dish
+  pk:
+  fields:
+    name: Котлеты из птицы
+    description:
+    weight: 100г
+    price: 1.26
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Филе из птицы в сыре
+    description:
+    weight: 130г
+    price: 1.85
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Сосиски отварные с кетчупом
+    description:
+    weight: 100г/20г
+    price: 1.12
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Поджарка
+    description:
+    weight: 150г
+    price: 1.93
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Скумбрия запеченная
+    description:
+    weight: 100г
+    price: 1.63
+    image:
+    is_enabled: True
+    category: 3
+    cafe: 2
+
+# Гарниры
+
+- model: common.dish
+  pk:
+  fields:
+    name: Макароны отварные
+    description:
+    weight: 150г
+    price: 0.56
+    image:
+    is_enabled: True
+    category: 4
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Каша гречневая
+    description:
+    weight: 150г
+    price: 0.45
+    image:
+    is_enabled: True
+    category: 4
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: драники со сметаной
+    description:
+    weight: 100г
+    price: 1.12
+    image:
+    is_enabled: True
+    category: 4
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Картофель отварной
+    description:
+    weight: 200г
+    price: 0.73
+    image:
+    is_enabled: True
+    category: 4
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Овощи жареные
+    description:
+    weight: 150г
+    price: 1.42
+    image:
+    is_enabled: True
+    category: 4
+    cafe: 2
+
+# Выпечка
+
+- model: common.dish
+  pk:
+  fields:
+    name: Блинчик с ветчиной и сыром
+    description:
+    weight: 75г
+    price: 1.02
+    image:
+    is_enabled: True
+    category: 7
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Блинчик с творогом
+    description:
+    weight: 75г
+    price: 0.94
+    image:
+    is_enabled: True
+    category: 7
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: хлеб/батон (1 шт)
+    description:
+    weight:
+    price: 0.05
+    image:
+    is_enabled: True
+    category: 7
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Хот-дог
+    description:
+    weight: 160г
+    price: 2
+    image:
+    is_enabled: True
+    category: 7
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Гамбургер
+    description:
+    weight: 200г
+    price: 3
+    image:
+    is_enabled: True
+    category: 7
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: пицца бонза
+    description:
+    weight: 450г
+    price: 7.5
+    image:
+    is_enabled: True
+    category: 7
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: пицца Вегетериано
+    description:
+    weight: 450г
+    price: 7.5
+    image:
+    is_enabled: True
+    category: 7
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: Лаваш-Рол
+    description:
+    weight: 300г
+    price: 3.5
+    image:
+    is_enabled: True
+    category: 7
+    cafe: 2
+- model: common.dish
+  pk:
+  fields:
+    name: пицца 4 сезона
+    description:
+    weight: 480г
+    price: 7.5
+    image:
+    is_enabled: True
+    category: 7
+    cafe: 2

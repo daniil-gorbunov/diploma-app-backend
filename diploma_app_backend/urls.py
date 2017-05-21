@@ -17,7 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from tastypie.api import Api
 from common.api.resources import(
-    DishResource, DishCategoryResource, OrderResource, SellerResource, SellerFeedbackResource
+    DishResource, DishCategoryResource, OrderResource, CafeResource, CafeFeedbackResource
 )
 
 
@@ -25,8 +25,8 @@ v1_api = Api(api_name='v1')
 v1_api.register(DishResource())
 v1_api.register(DishCategoryResource())
 v1_api.register(OrderResource())
-v1_api.register(SellerResource())
-v1_api.register(SellerFeedbackResource())
+v1_api.register(CafeResource())
+v1_api.register(CafeFeedbackResource())
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

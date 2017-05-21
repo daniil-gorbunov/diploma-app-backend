@@ -4,16 +4,18 @@ from django.db.models import (
 from django.contrib.auth.models import User
 
 
-class Seller(Model):
+class Cafe(Model):
     name = CharField(max_length=255)
+    phone = CharField(max_length=255, null=True, blank=True)
+    logo = CharField(max_length=255, null=True, blank=True)
     is_enabled = BooleanField(default=True)
 
 
-class SellerFeedback(Model):
+class CafeFeedback(Model):
     text = TextField()
     is_enabled = BooleanField(default=True)
     created_at = DateTimeField(auto_now_add=True)
-    seller = ForeignKey(Seller)
+    cafe = ForeignKey(Cafe)
     user = ForeignKey(User)
 
 
@@ -23,12 +25,13 @@ class DishCategory(Model):
 
 class Dish(Model):
     name = CharField(max_length=255)
-    description = TextField(default='')
-    weight = IntegerField(default=0)
+    description = TextField(default='', null=True, blank=True)
+    weight = CharField(max_length=100, default='', null=True, blank=True)
     price = DecimalField(max_digits=11, decimal_places=2)
-    image = CharField(max_length=255)
+    image = CharField(max_length=255, null=True, blank=True)
     is_enabled = BooleanField()
     category = ForeignKey(DishCategory)
+    cafe = ForeignKey(Cafe)
 
 
 class Order(Model):
@@ -48,6 +51,7 @@ class Order(Model):
     feedback = TextField(null=True, blank=True)
     created_at = DateTimeField(auto_now_add=True)
     user = ForeignKey(User)
+    cafe = ForeignKey(Cafe)
     dishes = ManyToManyField(Dish, through='OrderDish')
 
 

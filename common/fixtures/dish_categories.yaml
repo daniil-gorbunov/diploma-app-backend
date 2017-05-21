@@ -1,0 +1,40 @@
+- model: common.dishcategory
+  pk: 1
+  fields:
+    name: Салаты
+- model: common.dishcategory
+  pk: 2
+  fields:
+    name: Первые блюда
+- model: common.dishcategory
+  pk: 3
+  fields:
+    name: Вторые блюда
+- model: common.dishcategory
+  pk: 4
+  fields:
+    name: Гарниры
+- model: common.dishcategory
+  pk: 5
+  fields:
+    name: Комплексы
+- model: common.dishcategory
+  pk: 6
+  fields:
+    name: Хлеб
+- model: common.dishcategory
+  pk: 7
+  fields:
+    name: Выпечка
+- model: common.dishcategory
+  pk: 8
+  fields:
+    name: Десерты
+- model: common.dishcategory
+  pk: 9
+  fields:
+    name: Напитки
+- model: common.dishcategory
+  pk: 10
+  fields:
+    name: Другое

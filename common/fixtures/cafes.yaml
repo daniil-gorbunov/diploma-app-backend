@@ -1,0 +1,14 @@
+- model: common.cafe
+  pk: 1
+  fields:
+    name: Браво
+    phone: +375 (44) 757 37 94
+    logo: assets/img/bravo-logo.jpg
+    is_enabled: True
+- model: common.cafe
+  pk: 2
+  fields:
+    name: Сели & Съели
+    phone: +375 (29) 613 99 89
+    logo: assets/img/seli-sjeli-logo.jpg
+    is_enabled: True
