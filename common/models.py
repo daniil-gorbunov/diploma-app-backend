@@ -1,5 +1,14 @@
 from django.db.models import (
-    BooleanField, CharField, DateTimeField, DecimalField, ForeignKey, IntegerField, ManyToManyField, Model, TextField
+    BooleanField,
+    CharField,
+    DateTimeField,
+    DecimalField,
+    ForeignKey,
+    IntegerField,
+    ManyToManyField,
+    Model,
+    PositiveSmallIntegerField,
+    TextField,
 )
 from django.contrib.auth.models import User
 
@@ -48,7 +57,7 @@ class Order(Model):
     )
 
     status = IntegerField(default=STATUS_ORDERING, choices=STATUS_CHOICES)
-    feedback = TextField(null=True, blank=True)
+    comment = TextField(null=True, blank=True)
     created_at = DateTimeField(auto_now_add=True)
     user = ForeignKey(User)
     cafe = ForeignKey(Cafe)
@@ -56,6 +65,7 @@ class Order(Model):
 
 
 class OrderDish(Model):
+    quantity = PositiveSmallIntegerField(default=1)
     price = DecimalField(max_digits=11, decimal_places=2)
     order = ForeignKey(Order)
     dish = ForeignKey(Dish)
