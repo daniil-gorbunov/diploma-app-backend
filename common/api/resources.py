@@ -1,10 +1,8 @@
-from tastypie.authorization import Authorization
-from tastypie.authentication import Authentication
 from tastypie.constants import ALL, ALL_WITH_RELATIONS
-from tastypie.fields import ForeignKey, IntegerField, ToManyField
+from tastypie.fields import ForeignKey, ToManyField
 from tastypie.resources import ModelResource
 from django.contrib.auth.models import User
-from common.models import Dish, DishCategory, Cafe, CafeFeedback, Order
+from common.models import Dish, DishCategory, Cafe, CafeFeedback, Order, OrderDish
 from common.api.authorization import AllowAllAuthorization
 
 
@@ -13,7 +11,8 @@ class DishCategoryResource(ModelResource):
     class Meta:
         queryset = DishCategory.objects.all()
         resource_name = 'dish_category'
-        allowed_methods = ['get']
+        allowed_methods = ['get', 'post']
+        authorization = AllowAllAuthorization()
 
 
 class CafeResource(ModelResource):
@@ -25,6 +24,7 @@ class CafeResource(ModelResource):
         filtering = {
             'id': ALL,
         }
+        authorization = AllowAllAuthorization()
 
 
 class CafeFeedbackResource(ModelResource):
@@ -36,12 +36,12 @@ class CafeFeedbackResource(ModelResource):
         filtering = {
             'cafe': ALL_WITH_RELATIONS,
         }
+        authorization = AllowAllAuthorization()
 
 
 class DishResource(ModelResource):
     cafe = ForeignKey(CafeResource, 'cafe')
     category = ForeignKey(DishCategoryResource, 'category', full=True)
-    quantity = IntegerField(default=0)
 
     class Meta:
         queryset = Dish.objects.prefetch_related('category').filter(is_enabled=True).all()
@@ -50,6 +50,7 @@ class DishResource(ModelResource):
         filtering = {
             'cafe': ALL_WITH_RELATIONS,
         }
+        authorization = AllowAllAuthorization()
 
 
 class UserResource(ModelResource):
@@ -57,15 +58,16 @@ class UserResource(ModelResource):
         queryset = User.objects.all()
         resource_name = 'user'
         allowed_methods = ['get']
+        authorization = AllowAllAuthorization()
 
 
 class OrderResource(ModelResource):
-    user = ForeignKey(UserResource, 'user')
+    user = ForeignKey(UserResource, 'user', full=True)
     cafe = ForeignKey(CafeResource, 'cafe')
     dishes = ToManyField(DishResource, 'dishes', full=True)
 
     class Meta:
-        queryset = Order.objects.prefetch_related('dishes').all()
+        queryset = Order.objects.prefetch_related('dishes', 'user').filter(status=Order.STATUS_ORDERING).all()
         resource_name = 'order'
         allowed_methods = ['get', 'post']
         filtering = {
@@ -73,3 +75,20 @@ class OrderResource(ModelResource):
             'user': ALL_WITH_RELATIONS,
         }
         authorization = AllowAllAuthorization()
+
+    def save_m2m(self, bundle):
+        for field_name, field_object in self.fields.items():
+            if not getattr(field_object, 'is_m2m', False):
+                continue
+
+            if not field_object.attribute:
+                continue
+
+            for field in bundle.data[field_name]:
+                dish = Dish.objects.get(pk=field.data['dish_id'])
+                OrderDish.objects.get_or_create(
+                    dish=dish,
+                    order=bundle.obj,
+                    quantity=field.data['quantity'],
+                    price=dish.price
+                )

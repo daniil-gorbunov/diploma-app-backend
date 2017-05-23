@@ -66,6 +66,6 @@ class Order(Model):
 
 class OrderDish(Model):
     quantity = PositiveSmallIntegerField(default=1)
-    price = DecimalField(max_digits=11, decimal_places=2)
+    price = DecimalField(max_digits=11, decimal_places=2, default=0)
     order = ForeignKey(Order)
     dish = ForeignKey(Dish)
